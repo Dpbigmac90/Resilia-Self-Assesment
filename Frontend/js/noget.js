@@ -17,7 +17,7 @@ function getCall() {
             var notifications = document.getElementById("notifications");
             data.forEach(element => {
                 var div = document.createElement("div");
-                div.innerHTML = '<b>Title: </b>' + element.title + '<b> Description: </b>' + element.description + '<b> Domain: </b>' + element.url + '<b> Icon: </b>' + element.icon;
+                div.innerHTML = '<b>Title: </b>' + element.title + '<b> Description: </b>' + element.description + '<b> Domain: </b>' + element.domain + '<b> Icon: </b>' + element.icon;
                 notifications.appendChild(div);
             });
 
