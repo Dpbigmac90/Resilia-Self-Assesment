@@ -1,5 +1,6 @@
 // Require project dependencies
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 
 // Require notifications routes
@@ -31,9 +32,11 @@ useNewUrlParser: true
   process.exit();
 });
 
+// Enable cors so our frontend can access our server
+app.use(cors())
+
 // using as middleware
 app.use('/CommunityOutreach/notifications', notificationRoutes)
-
 
 // listen for requests
 app.listen(port, () => {
